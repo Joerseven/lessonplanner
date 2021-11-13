@@ -23,12 +23,11 @@ export default () => {
         <div className="timetable">
             {mondayClasses.map((day, rposition) => {
                 return (
-                    <span key={rposition}>
-                        {days[rposition]}
+                    <>
                         {day.map((group, cposition) => {
                             return <Timetableblock key={cposition} setActive={changeActiveBlock} active={rposition === activeBlock[0] && cposition == activeBlock[1]} group={group} cposition={cposition} rposition={rposition} />
                         })}
-                    </span>
+                    </>
                 )
             })}
         </div>

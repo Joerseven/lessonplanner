@@ -22,11 +22,13 @@ export default () => {
     return (
         <div className="objectives">
             <h2>Objectives</h2>
+            <div className="objectivearea">
             <div className="objectiveinput">
                 <textarea placeholder="Enter in your obectives here" value={objectiveInput} onChange={event => setObjectiveInput(event.target.value)}></textarea>
                 <div className="objectivebutton" onClick={addObjective}>+</div>
             </div>
             {objectives.map(objective => <Objectivetile objectivevalue={objective} remove={removeObjective}></Objectivetile>)}
+            </div>
         </div> 
     );
 }

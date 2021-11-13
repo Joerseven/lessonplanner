@@ -11,17 +11,41 @@ interface timetableProps {
 export default (props:timetableProps) => {
 
     const style = {
-        gridColumnStart: props.cposition + 1,
-        gridColumnEnd: props.cposition + 2,
-        rowColumnStart: props.rposition + 1,
-        rowColumnEnd: props.rposition + 2,
-        borderWidth: "1px",
-        margin: "0px"
+        gridColumnStart: props.rposition + 1,
+        gridColumnEnd: props.rposition + 2,
+        gridRowStart: props.cposition + 1,
+        gridRowEnd: props.cposition + 2,
+        margin: "0",
+        backgroundColor: "white",
+        borderColor: "white",
+        borderStyle: "dashed",
+        borderWidth: "0px"
+    }
+
+    if (props.group.includes("9")) {
+        style.backgroundColor = "#ffb3b3"
+        style.borderColor = "#ff6666"
+    } 
+    else if (props.group.includes("8")) {
+        style.backgroundColor = "#ffc2b3"
+        style.borderColor = "#ff8566"
+    } 
+    else if (props.group.includes("10")) {
+        style.backgroundColor = "#ffffb3"
+        style.borderColor = "#ffff00"
+    }
+    else if (props.group.includes("11")) {
+        style.backgroundColor = "#ecffb3"
+        style.borderColor = "#d9ff66"
+    }
+    else if (props.group.includes("Non-contact")) {
+        style.backgroundColor = "#b3ffb3"
+        style.borderColor = "#66ff66"
     }
 
     if (props.active) {
-        style.borderWidth = "3px"
-        style.margin = "-2px"
+        style.borderWidth = "2px"
+        style.margin = "-4px"
     }
 
 

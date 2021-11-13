@@ -1,160 +1,288 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap');
 body {
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
-    background: repeating-radial-gradient(circle at bottom left, #fedc00 0, #fedc00 5.5555555556%, #fcb712 0, #fcb712 11.1111111111%, #f7921e 0, #f7921e 16.6666666667%, #e87f24 0, #e87f24 22.2222222222%, #dd6227 0, #dd6227 27.7777777778%, #dc4c27 0, #dc4c27 33.3333333333%, #ca3435 0, #ca3435 38.8888888889%, #b82841 0, #b82841 44.4444444444%, #953751 0, #953751 50%, #364c88 0, #364c88 55.5555555556%, #16599d 0, #16599d 61.1111111111%, #02609e 0, #02609e 66.6666666667%, #0073a9 0, #0073a9 72.2222222222%, #008aa4 0, #008aa4 77.7777777778%, #239a87 0, #239a87 83.3333333333%, #7cba6d 0, #7cba6d 88.8888888889%, #becc2f 0, #becc2f 94.4444444444%, #e0d81d 0, #e0d81d 100%), repeating-radial-gradient(circle at bottom right, #fedc00 0, #fedc00 5.5555555556%, #fcb712 0, #fcb712 11.1111111111%, #f7921e 0, #f7921e 16.6666666667%, #e87f24 0, #e87f24 22.2222222222%, #dd6227 0, #dd6227 27.7777777778%, #dc4c27 0, #dc4c27 33.3333333333%, #ca3435 0, #ca3435 38.8888888889%, #b82841 0, #b82841 44.4444444444%, #953751 0, #953751 50%, #364c88 0, #364c88 55.5555555556%, #16599d 0, #16599d 61.1111111111%, #02609e 0, #02609e 66.6666666667%, #0073a9 0, #0073a9 72.2222222222%, #008aa4 0, #008aa4 77.7777777778%, #239a87 0, #239a87 83.3333333333%, #7cba6d 0, #7cba6d 88.8888888889%, #becc2f 0, #becc2f 94.4444444444%, #e0d81d 0, #e0d81d 100%);
-    background-blend-mode: overlay;
-    height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  background: repeating-radial-gradient(
+      circle at bottom left,
+      #fedc00 0,
+      #fedc00 5.5555555556%,
+      #fcb712 0,
+      #fcb712 11.1111111111%,
+      #f7921e 0,
+      #f7921e 16.6666666667%,
+      #e87f24 0,
+      #e87f24 22.2222222222%,
+      #dd6227 0,
+      #dd6227 27.7777777778%,
+      #dc4c27 0,
+      #dc4c27 33.3333333333%,
+      #ca3435 0,
+      #ca3435 38.8888888889%,
+      #b82841 0,
+      #b82841 44.4444444444%,
+      #953751 0,
+      #953751 50%,
+      #364c88 0,
+      #364c88 55.5555555556%,
+      #16599d 0,
+      #16599d 61.1111111111%,
+      #02609e 0,
+      #02609e 66.6666666667%,
+      #0073a9 0,
+      #0073a9 72.2222222222%,
+      #008aa4 0,
+      #008aa4 77.7777777778%,
+      #239a87 0,
+      #239a87 83.3333333333%,
+      #7cba6d 0,
+      #7cba6d 88.8888888889%,
+      #becc2f 0,
+      #becc2f 94.4444444444%,
+      #e0d81d 0,
+      #e0d81d 100%
+    ),
+    repeating-radial-gradient(
+      circle at bottom right,
+      #fedc00 0,
+      #fedc00 5.5555555556%,
+      #fcb712 0,
+      #fcb712 11.1111111111%,
+      #f7921e 0,
+      #f7921e 16.6666666667%,
+      #e87f24 0,
+      #e87f24 22.2222222222%,
+      #dd6227 0,
+      #dd6227 27.7777777778%,
+      #dc4c27 0,
+      #dc4c27 33.3333333333%,
+      #ca3435 0,
+      #ca3435 38.8888888889%,
+      #b82841 0,
+      #b82841 44.4444444444%,
+      #953751 0,
+      #953751 50%,
+      #364c88 0,
+      #364c88 55.5555555556%,
+      #16599d 0,
+      #16599d 61.1111111111%,
+      #02609e 0,
+      #02609e 66.6666666667%,
+      #0073a9 0,
+      #0073a9 72.2222222222%,
+      #008aa4 0,
+      #008aa4 77.7777777778%,
+      #239a87 0,
+      #239a87 83.3333333333%,
+      #7cba6d 0,
+      #7cba6d 88.8888888889%,
+      #becc2f 0,
+      #becc2f 94.4444444444%,
+      #e0d81d 0,
+      #e0d81d 100%
+    );
+  background-blend-mode: overlay;
+  height: 100vh;
 }
 
 textarea {
-    resize: none;
-    width: 80%;
+  resize: none;
+  width: 80%;
 }
 
 .wrapper {
-    width: 90%;
-    margin: 0 auto;
-    background: white;
-    min-height: 50em;
+  width: 90%;
+  margin: 0 auto;
+  background: white;
+  min-height: 50em;
 }
 
 .title {
-    text-align: center;
-    display: inline-block;
-    margin: 1px;
-    padding: 5px 0;
-}
-
-.title:hover {
-    border: 1px solid black;
-    margin: 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  text-align: center;
+  display: inline-block;
+  margin: 1px;
+  padding: .5em;
 }
 
 .timetable {
-    width: 80%;
-    margin: 1em auto;
-    display: grid;
-    grid-template-columns: repeat(5, 20%);
-    grid-template-rows: repeat(5,20%);
+  width: 70%;
+  margin: 1em auto;
+  display: grid;
+  grid-template-columns: repeat(5, 19.2%);
+  grid-template-rows: repeat(5, 17.6%);
+  column-gap: 1%;
+  row-gap: 3%;
 }
 
 .timetableblock {
-    border: 1px solid black;
-    padding: .5em 0;
+  font-size: 0.9em;
+  padding: 1em;
+  border-radius: 5px;
 }
 
 .timetableclass {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .timetabledetails {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  color: gray;
+  justify-content: space-evenly;
+  font-size: 0.9em;
 }
 
 .lessoncontent {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
+  gap: 3em;
+  margin: 1em 3em;
 }
 
 .objectives {
-    flex: 1;
+  flex: 1;
+}
+
+.objectives > h2 {
+  margin: 0;
+  border-radius: 20px 20px 0 0;
+  background-color: gray;
+  color: white;
+  font-family: Raleway, sans-serif;
+  font-weight: 200;
+  padding: .3em;
+}
+
+.objectivearea {
+  border: 2px solid grey;
+  border-radius: 0 0 20px 20px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
 }
 
 .objectiveinput {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  order: 99; 
+}
+
+.objectives textarea {
+  font-family: 'Open Sans', sans-serif;
+  border: none;
+  border-bottom: 2px solid gray;
+  outline: 0px none transparent;
+  overflow: auto;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize:none;
+}
+
+textarea:focus, input:focus {
+  outline: 0;
 }
 
 .objectivebutton {
-    background-color: gray;
-    font-weight: bold;
-    color: white;
-    height: 2em;
-    width: 2em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    margin-left: .3em;
+  background-color: gray;
+  font-weight: bold;
+  color: white;
+  height: 2em;
+  width: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 0.3em;
 }
 
 .objectivetile {
-    background-color: lightgray;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: .3em auto;
-    padding: .4em;
-    width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  padding: 0.4em;
+  margin: auto 0.3em;
+  width: 90%;
+  font-weight: bold;
 }
 .objectivetilebutton {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .objectivetile:hover .objectivetilebutton {
-    visibility: visible;
+  visibility: visible;
 }
 
 .descriptionblock {
-    flex: 1;
+  flex: 1;
+}
+
+.descriptionblock > h2 {
+  margin: 0;
+  border-radius: 20px 20px 0 0;
+  background-color: gray;
+  color: white;
+  font-family: Raleway, sans-serif;
+  font-weight: 200;
+  padding: .3em;
 }
 
 .editableblock {
-    min-height: 15em;
-    border: 1px solid grey;
-    text-align: left;
-    padding: 0.3em;
+  min-height: 15em;
+  border: 2px solid grey;
+  border-radius: 0 0 20px 20px;
+  text-align: left;
+  padding: 0.5em;
 }
 
 .readybox {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .checktile {
-    width: 90%;
-    background-color: grey;
-    color: white;
-    margin: .5em 0 .5em 0;
-    padding: 0.5em;
-    text-align: left;
+  width: 90%;
+  background-color: grey;
+  color: white;
+  margin: 0.5em 0 0.5em 0;
+  padding: 0.5em;
+  text-align: left;
 }
 
 .checktile {
-    display: flex;
-    position: relative;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .checktile input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
 
 .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: white;
 }
 
 .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
+  content: "";
+  position: absolute;
+  display: none;
 }
