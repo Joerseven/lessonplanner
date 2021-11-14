@@ -19,7 +19,8 @@ export default (props:timetableProps) => {
         backgroundColor: "white",
         borderColor: "white",
         borderStyle: "dashed",
-        borderWidth: "0px"
+        borderWidth: "0px",
+        color: 'black'
     }
 
     if (props.group.includes("9")) {
@@ -32,20 +33,21 @@ export default (props:timetableProps) => {
     } 
     else if (props.group.includes("10")) {
         style.backgroundColor = "#ffffb3"
-        style.borderColor = "#ffff00"
+        style.borderColor = "#e1e100"
     }
     else if (props.group.includes("11")) {
         style.backgroundColor = "#ecffb3"
-        style.borderColor = "#d9ff66"
+        style.borderColor = "#b9ee55"
     }
     else if (props.group.includes("Non-contact")) {
-        style.backgroundColor = "#b3ffb3"
-        style.borderColor = "#66ff66"
+        style.backgroundColor = "#eeeeee"
+        style.borderColor = "#cccccc"
+        style.color = '#888888'
     }
 
     if (props.active) {
         style.borderWidth = "2px"
-        style.margin = "-4px"
+        style.margin = "-2px"
     }
 
 

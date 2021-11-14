@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap");
 body {
   font-family: "Open Sans", sans-serif;
   text-align: center;
@@ -94,25 +94,48 @@ textarea {
   margin: 0 auto;
   background: white;
   min-height: 50em;
+  max-width: 1000px;
 }
 
 .title {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 500;
+  font-family: "Raleway", sans-serif;
+  font-weight: bolder;
+  font-size: 2.5em;
   text-align: center;
   display: inline-block;
   margin: 1px;
-  padding: .5em;
+  padding: 0.5em;
 }
 
 .timetable {
   width: 70%;
-  margin: 1em auto;
+  max-width: 900px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(5, 19.2%);
   grid-template-rows: repeat(5, 17.6%);
   column-gap: 1%;
   row-gap: 3%;
+  box-shadow: inset 0 0 4px gray;
+  padding: 3%;
+}
+
+.tabs {
+  display: flex;
+  max-width: 900px;
+  width: 76%;
+  margin: 0 auto;
+}
+
+.tab {
+  background-color: lightgray;
+  border-radius: 5px 5px 0 0;
+  padding: 1em;
+}
+
+.tab.active {
+  background-color: gray;
+
 }
 
 .timetableblock {
@@ -133,14 +156,20 @@ textarea {
 }
 
 .lessoncontent {
-  display: flex;
-  justify-content: space-around;
-  gap: 3em;
-  margin: 1em 3em;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 48% 48%;
+  grid-template-rows: auto 10em;
+  gap: 4%;
+  margin: 1em auto;
+  min-height: 15em;
+  padding: 2em;
 }
 
 .objectives {
-  flex: 1;
+  grid-area: 1 / 1 / 2 / 2 ;
+  display: flex;
+  flex-direction: column;
 }
 
 .objectives > h2 {
@@ -150,7 +179,7 @@ textarea {
   color: white;
   font-family: Raleway, sans-serif;
   font-weight: 200;
-  padding: .3em;
+  padding: 0.3em;
 }
 
 .objectivearea {
@@ -159,17 +188,19 @@ textarea {
   padding: 1em;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  height: 100%
 }
 
 .objectiveinput {
   display: flex;
   align-items: center;
   justify-content: center;
-  order: 99; 
+  order: 99;
 }
 
 .objectives textarea {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   border: none;
   border-bottom: 2px solid gray;
   outline: 0px none transparent;
@@ -177,10 +208,11 @@ textarea {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  resize:none;
+  resize: none;
 }
 
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
   outline: 0;
 }
 
@@ -216,7 +248,10 @@ textarea:focus, input:focus {
 }
 
 .descriptionblock {
-  flex: 1;
+  grid-area: 1 / 2 / 3 / 3;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
 }
 
 .descriptionblock > h2 {
@@ -226,63 +261,81 @@ textarea:focus, input:focus {
   color: white;
   font-family: Raleway, sans-serif;
   font-weight: 200;
-  padding: .3em;
+  padding: 0.3em;
 }
 
 .editableblock {
-  min-height: 15em;
   border: 2px solid grey;
   border-radius: 0 0 20px 20px;
   text-align: left;
   padding: 0.5em;
+  height: 100%;
 }
 
 .readybox {
-  flex: 1;
+  grid-area: 2 / 1 / 3 / 2;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
 }
 
-.checktile {
-  width: 90%;
-  background-color: grey;
+.readybox > h2 {
+  margin: 0;
+  border-radius: 20px 20px 0 0;
+  background-color: gray;
   color: white;
-  margin: 0.5em 0 0.5em 0;
-  padding: 0.5em;
-  text-align: left;
+  font-family: Raleway, sans-serif;
+  font-weight: 200;
+  padding: 0.3em;
 }
 
-.checktile {
+.checklistarea {
   display: flex;
-  position: relative;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1em auto;
+  border: 2px solid gray;
+  border-radius: 0 0 20px 20px;
+  height: 100%
 }
 
-.checktile input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
+.checklistarea input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
   background-color: white;
+  margin: 0;
+
+  font: inherit;
+  color: gray;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid gray;
+  border-radius: 0.15em;
+  transform: translate(-0.075em);
+
+  display: grid;
+  place-content: center;
+
 }
 
-.checkmark:after {
+.checklistarea input[type="checkbox"]::before {
   content: "";
-  position: absolute;
-  display: none;
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em green;
+}
+
+.checklistarea input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.checklistarea > label {
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.2;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+  margin: 1em 1em;
 }
