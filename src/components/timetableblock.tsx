@@ -1,6 +1,7 @@
 import React from 'react';
 
 interface timetableProps {
+    key: string;
     cposition: number;
     rposition: number;
     group: string;

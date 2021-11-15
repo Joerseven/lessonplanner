@@ -2,7 +2,12 @@ import React, { useState } from 'react';
 
 import Objectivetile from './objectivetile';
 
-export default () => {
+interface proptypes {
+    activeWeek: number;
+    activeDay: number[];
+}
+
+export default (props: proptypes) => {
 
     const [objectives, setObjectives] = useState<Array<string>>([])
     const [objectiveInput, setObjectiveInput] = useState<string>('');

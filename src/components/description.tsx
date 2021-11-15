@@ -1,6 +1,11 @@
 import React from "react";
 
-export default () => {
+interface proptypes {
+    activeWeek: number;
+    activeDay: number[];
+}
+
+export default (props:proptypes) => {
     return (
         <div className="descriptionblock">
             <h2>Notes</h2>

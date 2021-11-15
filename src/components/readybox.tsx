@@ -1,6 +1,11 @@
 import React from "react";
 
-export default () => {
+interface proptypes {
+    activeWeek: number;
+    activeDay: number[];
+}
+
+export default (props:proptypes) => {
   return (
     <div className="readybox">
       <h2>Checklist</h2>
