@@ -31,15 +31,15 @@ export default (props: timetableProps) => {
     return (
         <>
             <div className="tabs">
-                <div className={`tab${props.activeWeek == 1 ? ' active' : ''}`} onClick={() => props.setActiveWeek(1)}>Week One</div>
-                <div className={`tab${props.activeWeek == 2 ? ' active' : ''}`} onClick={() => props.setActiveWeek(2)}>Week Two</div>
+                <div className={`tab${props.activeWeek === 1 ? ' active' : ''}`} onClick={() => props.setActiveWeek(1)}>Week One</div>
+                <div className={`tab${props.activeWeek === 2 ? ' active' : ''}`} onClick={() => props.setActiveWeek(2)}>Week Two</div>
             </div>
             <div className="timetable">
-                {(props.activeWeek == 1 ? weekOneClasses : weekTwoClasses).map((day, rposition) => {
+                {(props.activeWeek === 1 ? weekOneClasses : weekTwoClasses).map((day, rposition) => {
                     return (
                         <>
                             {day.map((group, cposition) => {
-                                return <Timetableblock key={"" + cposition + rposition} setActive={props.setActive} active={rposition === props.activeDay[0] && cposition == props.activeDay[1]} group={group} cposition={cposition} rposition={rposition} />
+                                return <Timetableblock key={"" + cposition + rposition} setActive={props.setActive} active={rposition === props.activeDay[0] && cposition === props.activeDay[1]} group={group} cposition={cposition} rposition={rposition} />
                             })}
                         </>
                     )
